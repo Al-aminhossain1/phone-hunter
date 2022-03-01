@@ -22,7 +22,7 @@ const displayResult = phones => {
     else {
         document.getElementById('error-text').style.display = 'none';
         const displayOutput = document.getElementById('display-result');
-        displayOutput.innerHTML = '';
+        // displayOutput.innerHTML = '';
         phones.forEach(phone => {
             const div = document.createElement('div');
             div.innerHTML = `<div class="card h-50 w-50 mx-auto">
@@ -48,12 +48,10 @@ const PhoneDetales = phoneId => {
 }
 // Show Phone Details
 const displayPhoneDetales = (details) => {
-    console.log(details);
-    console.log(details.others);
     const detaile = document.getElementById('display-details');
     const div = document.createElement('div');
     detaile.innerHTML = '';
-    div.innerHTML = `<div class="card h-50 w-50 mx-auto bg-info bg-gradient bg-opacity-25 my-5 ">
+    div.innerHTML = `<div class="card h-50 w-50 pt-5 mx-auto bg-info bg-gradient bg-opacity-25 my-5 ">
     <img class="card h-25 w-25 mx-auto" src="${details.image}"card-img-top" alt="...">
       <div class="card-body ">
         <h4 class="card-title">${details.brand}</h4>
@@ -63,12 +61,12 @@ const displayPhoneDetales = (details) => {
          <p><span class="fs-5">memory:</span>  ${details.mainFeatures.memory}</p>
         <p><span class="fs-5">Sensors:</span>  ${details.mainFeatures.sensors}</p> 
         <h4>Others:</h4>
-        <p><span class="fs-5">Bluetooth:</span>  ${details.others.Bluetooth}</p> 
-        <p><span class="fs-5">GPS:</span>  ${details.others.GPS}</p> 
-        <p><span class="fs-5">NFC:</span>  ${details.others.NFC}</p> 
-        <p><span class="fs-5">Radio:</span>  ${details.others.Radio}</p> 
-        <p><span class="fs-5">USB:</span>  ${details.others.USB}</p> 
-        <p><span class="fs-5">WLAN:</span>  ${details.others.WLAN}</p> 
+        <p><span class="fs-5">Bluetooth:</span> ${details.others?.Bluetooth}</p> 
+        <p><span class="fs-5">GPS:</span>  ${details.others?.GPS}</p> 
+        <p><span class="fs-5">NFC:</span>  ${details.others?.NFC}</p> 
+        <p><span class="fs-5">Radio:</span>  ${details.others?.Radio}</p> 
+        <p><span class="fs-5">USB:</span>  ${details.others?.USB}</p> 
+        <p><span class="fs-5">WLAN:</span>  ${details.others?.WLAN}</p> 
         </div>
     </div > `
     detaile.appendChild(div)
