@@ -60,13 +60,15 @@ const displayPhoneDetales = (details) => {
         <p><span class="fs-5">displaySize:</span>  ${details.mainFeatures.displaySize}</p>
          <p><span class="fs-5">memory:</span>  ${details.mainFeatures.memory}</p>
         <p><span class="fs-5">Sensors:</span>  ${details.mainFeatures.sensors}</p> 
-        <h4>Others:</h4>
-        <p><span class="fs-5">Bluetooth:</span> ${details.others?.Bluetooth}</p> 
-        <p><span class="fs-5">GPS:</span>  ${details.others?.GPS}</p> 
-        <p><span class="fs-5">NFC:</span>  ${details.others?.NFC}</p> 
-        <p><span class="fs-5">Radio:</span>  ${details.others?.Radio}</p> 
-        <p><span class="fs-5">USB:</span>  ${details.others?.USB}</p> 
-        <p><span class="fs-5">WLAN:</span>  ${details.others?.WLAN}</p> 
+        <h4>Others:</h4> 
+        <p><span class="fs-5">Bluetooth:</span> ${details.others?.Bluetooth ? details.others?.Bluetooth : "NO"}</p> 
+        <p><span class="fs-5">GPS:</span>  ${details.others?.GPS ? details.others?.GPS : "No"}</p> 
+        <p><span class="fs-5">NFC:</span>  ${details.others?.NFC ? details.others?.NFC : "NO"}</p>  
+        <p><span class="fs-5">Radio:</span>  ${details.others?.Radio ? details.others?.Radio : 'No'}</p> 
+         <p><span class="fs-5">USB:</span>  ${details.others?.USB ? details.others?.USB : "No"}</p> 
+        <p><span class="fs-5">WLAN:</span>  ${details.others?.WLAN ? details.others?.WLAN : "No"}</p> 
+    
+        
         </div>
     </div > `
     detaile.appendChild(div)
